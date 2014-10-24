@@ -1,0 +1,35 @@
+.cascade-container {
+    width: 960px;
+    height: 50px;
+    background-color: whitesmoke;
+}
+
+.cascade-unit {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background-color: gainsboro;
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+.cascade-unit:hover {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.cascade-active {
+    background-color: dodgerblue;
+    color: white;
+}
