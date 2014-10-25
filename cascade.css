@@ -39,12 +39,10 @@
     color: white;
 }
 
-.triangle-icon {
-    width:0;
-    height:0;
-    border-width:10px;
-    border-style:solid;
-    border-color:#c03 transparent transparent;
-    margin-left: 50px;
-    display: inline;
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid black;
 }
