@@ -6,9 +6,11 @@
     <link rel="stylesheet" href="cascade.css">
 </head>
 <body ng-app="myapp">
+
     <div class="cascade-container" ng-controller="mockContrl">
+        <div class="cascade-unit position-fix" ng-class="{'cascade-active' : default}" ng-click="trigger0()">全部</div>
         <div class="cascade-unit" ng-repeat="item in data" ng-click="trigger(item)" ng-class="{'cascade-active' : item.active}">{{item.one}}</div>
-        <div class="cascade-container" ng-repeat="item in data" nggit-show="item.show">
+        <div class="cascade-container" ng-repeat="item in data" ng-show="item.show">
             <div class="cascade-unit" ng-repeat="item2 in item.two" id="{{item2.id}}" ng-class="{'cascade-active' : item2.active}" ng-click="trigger2(item2)">{{item2.name}}</div>
         </div>
     </div>

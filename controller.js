@@ -38,7 +38,23 @@ angular
                     }]
             }];
 
-        $scope.trigger = function (item) {
+
+
+        $scope.default = true;
+        $scope.trigger0 = function () {  // ALL
+            $scope.default = true;
+            for (var i = 0 ; i <= $scope.data.length - 1; i++){
+                $scope.data[i].show = false;
+                $scope.data[i].active = false;
+            }
+            for (var i = 0 ; i <= $scope.data.length - 1; i++){
+                for (var j = 0 ; j <= $scope.data[i].two.length - 1; j++) {
+                    $scope.data[i].two[j].active = false;
+                }
+            }
+        };
+        $scope.trigger = function (item) { // 一级
+            $scope.default = false;
             for (var i = 0 ; i <= $scope.data.length - 1; i++){
                 $scope.data[i].show = false;
                 $scope.data[i].active = false;
@@ -47,8 +63,7 @@ angular
             item.active = true;
             $scope.obtain = -1; // 归零判定
         };
-
-        $scope.trigger2 = function (item2) {
+        $scope.trigger2 = function (item2) { // 二级
             for (var i = 0 ; i <= $scope.data.length - 1; i++){
                 for (var j = 0 ; j <= $scope.data[i].two.length - 1; j++) {
                     $scope.data[i].two[j].active = false;

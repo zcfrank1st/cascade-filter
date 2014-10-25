@@ -25,6 +25,10 @@
     border-radius: 2px;
 }
 
+.position-fix {
+    margin: 10px 5px 10px 10px !important;
+}
+
 .cascade-unit:hover {
     background-color: dodgerblue;
     color: white;
